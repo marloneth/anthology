@@ -1,36 +1,66 @@
 import { cva, type VariantProps } from 'class-variance-authority';
 
-export type ButtonVariants = VariantProps<typeof variants>;
+export type CalloutVariants = VariantProps<typeof variants>;
 export const variants = cva(
-  ['font-semibold', 'border', 'rounded', 'shadow-sm', 'inline-flex', 'gap-1.5'],
+  [
+    'font-normal',
+    'border',
+    'rounded',
+    'shadow-sm',
+    'inline-flex',
+    'gap-1.5',
+    'flex-col',
+    'text-sm',
+    'p-3',
+    'w-64',
+  ],
   {
     variants: {
       variant: {
-        primary: ['bg-primary-600', 'text-white'],
+        primary: [
+          'bg-primary-200',
+          'border-primary-500',
+          'text-primary-900',
+          'dark:bg-primary-800',
+          'dark:border-primary-900',
+          'dark:text-primary-50',
+        ],
         success: [
-          'bg-white',
-          'text-slate-900',
-          'border-slate-300',
-          'hover:bg-slate-50',
-          'active:bg-slate-100',
+          'bg-success-200',
+          'border-success-500',
+          'text-success-900',
+          'dark:bg-success-800',
+          'dark:border-success-900',
+          'dark:text-success-50',
         ],
         danger: [
-          'bg-danger-600',
-          'text-white',
-          'border-transparent',
-          'hover:bg-danger-500',
-          'active:bg-danger-400',
+          'bg-danger-200',
+          'border-danger-500',
+          'text-danger-900',
+          'dark:bg-danger-800',
+          'dark:border-danger-900',
+          'dark:text-danger-50',
         ],
-      },
-      size: {
-        small: ['text-sm', 'px-2', 'py-1'],
-        medium: ['text-sm', 'px-2.5', 'py-1.5'],
-        large: ['text-sm', 'px-3', 'py-2'],
+        information: [
+          'bg-information-200',
+          'border-information-500',
+          'text-information-900',
+          'dark:bg-information-800',
+          'dark:border-information-900',
+          'dark:text-information-50',
+        ],
+        warning: [
+          'bg-warning-200',
+          'border-warning-500',
+          'text-warning-900',
+          'dark:bg-warning-800',
+          'dark:border-warning-900',
+          'dark:text-warning-50',
+        ],
       },
     },
     defaultVariants: {
       variant: 'primary',
-      size: 'medium',
     },
   },
 );
