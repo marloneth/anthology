@@ -6,13 +6,14 @@ const meta = {
   component: Callout,
   args: {
     title: 'An important title',
-    content:
+    children:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum porta elementum. Phasellus blandit risus vitae nunc viverra convallis. Ut ipsum augue, sagittis in massa a, semper tincidunt diam. Suspendisse ut elit tristique nunc accumsan lobortis. Quisque sit amet lorem maximus, pretium nulla ut, efficitur nisi. In at viverra velit. Maecenas sollicitudin feugiat pulvinar. In fringilla tortor at euismod pulvinar. Proin libero sapien, venenatis eget sollicitudin non, aliquet non leo.',
     variant: 'primary',
   },
   argTypes: {
     variant: {
       control: 'select',
+      options: ['primary', 'success', 'danger', 'information', 'warning'],
     },
   },
 } satisfies Meta<typeof Callout>;

@@ -1,14 +1,10 @@
-import type { ComponentProps } from 'react';
+import type { ComponentProps, PropsWithChildren } from 'react';
 import { CalloutVariants, variants } from './callout-variants';
 import { Icon, IconProps } from '../icon';
 
-type CalloutProps = ComponentProps<'div'> &
-  CalloutVariants & {
-    title: string;
-    content: string;
-  };
+type CalloutProps = PropsWithChildren<CalloutVariants & { title: string }>;
 
-export const Callout = ({ variant = 'primary', title, content, ...props }: CalloutProps) => {
+export const Callout = ({ variant = 'primary', title, children }: CalloutProps) => {
   const iconVariant: Record<NonNullable<CalloutVariants['variant']>, IconProps['type']> = {
     primary: 'pencil',
     success: 'success',
@@ -20,11 +16,11 @@ export const Callout = ({ variant = 'primary', title, content, ...props }: Callo
   if (!variant) return;
 
   return (
-    <div {...props} className={variants({ variant })}>
-      <h2 className="mb-2 flex items-center font-bold">
+    <div className={variants({ variant })}>
+      <h2 className="mb-2 flex font-bold">
         <Icon className="mr-2" type={iconVariant[variant]} /> {title}
       </h2>
-      <p>{content}</p>
+      <p>{children}</p>
     </div>
   );
 };
