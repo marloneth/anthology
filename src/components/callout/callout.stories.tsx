@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Callout } from './callout';
+import { variations } from './callout-variants';
 
 const meta = {
   title: 'Components/Callout',
@@ -13,7 +14,7 @@ const meta = {
   argTypes: {
     variant: {
       control: 'select',
-      options: ['primary', 'success', 'danger', 'information', 'warning'],
+      options: variations,
     },
   },
 } satisfies Meta<typeof Callout>;
