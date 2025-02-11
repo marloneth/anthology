@@ -81,7 +81,7 @@ export const LengthTooLong: Story = {
     await userEvent.type(textArea, inputValue);
     expect(textArea).toHaveAttribute('aria-invalid', 'true');
     expect(textArea).toHaveClass('ring-danger-500');
-    expect(count).toHaveStyle({ color: 'rgb(237, 70, 86)' });
+    expect(count).toHaveStyle({ color: 'rgb(246, 118, 127)' });
   },
 };
 

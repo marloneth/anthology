@@ -17,7 +17,7 @@ export const Callout = ({ variant = 'primary', title, children }: CalloutProps) 
 
   return (
     <div className={variants({ variant })}>
-      <h2 className="mb-2 flex font-bold">
+      <h2 className="mb-2 flex text-2xl font-bold">
         <Icon className="mr-2" type={iconVariant[variant]} /> {title}
       </h2>
       <p>{children}</p>

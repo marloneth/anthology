@@ -17,11 +17,11 @@ dependencies:
   react-dom:
     specifier: 18.3.1
     version: 18.3.1(react@18.3.1)
+  tailwind-merge:
+    specifier: ^3.0.1
+    version: 3.0.1
 
 devDependencies:
-  '@chromatic-com/storybook':
-    specifier: 1.5.0
-    version: 1.5.0(react@18.3.1)
   '@storybook/addon-a11y':
     specifier: 8.1.6
     version: 8.1.6
@@ -53,7 +53,7 @@ devDependencies:
     specifier: 8.1.6
     version: 8.1.6
   '@storybook/test-runner':
-    specifier: 0.17.0
+    specifier: ^0.17.0
     version: 0.17.0(storybook@8.1.6)
   '@types/react':
     specifier: 18.3.3
@@ -76,6 +76,9 @@ devDependencies:
   axe-playwright:
     specifier: 2.0.1
     version: 2.0.1(playwright@1.50.1)
+  chromatic:
+    specifier: ^11.25.2
+    version: 11.25.2
   class-variance-authority:
     specifier: 0.7.0
     version: 0.7.0
@@ -1821,24 +1824,6 @@ packages:
       }
     dependencies:
       statuses: 2.0.1
-    dev: true
-
-  /@chromatic-com/storybook@1.5.0(react@18.3.1):
-    resolution:
-      {
-        integrity: sha512-LkLKv7SWu/6kGep1ft2HA1T/cm14wU0zoW71gE4cZRcgUoRQJtyhITFTLHrjqAxz6bVqNgqzQtd5oBZ2nK3L3g==,
-      }
-    engines: { node: '>=16.0.0', yarn: '>=1.22.18' }
-    dependencies:
-      chromatic: 11.25.2
-      filesize: 10.1.6
-      jsonfile: 6.1.0
-      react-confetti: 6.2.2(react@18.3.1)
-      strip-ansi: 7.1.0
-    transitivePeerDependencies:
-      - '@chromatic-com/cypress'
-      - '@chromatic-com/playwright'
-      - react
     dev: true
 
   /@colors/colors@1.5.0:
@@ -8067,14 +8052,6 @@ packages:
       minimatch: 5.1.6
     dev: true
 
-  /filesize@10.1.6:
-    resolution:
-      {
-        integrity: sha512-sJslQKU2uM33qH5nqewAwVB2QgR6w1aMNsYUp3aN5rMRyXEwJGmZvaWzeJFNTOXWlHQyBFCWrdj3fV/fsTOX8w==,
-      }
-    engines: { node: '>= 10.4.0' }
-    dev: true
-
   /fill-range@7.1.1:
     resolution:
       {
@@ -13483,6 +13460,13 @@ packages:
       }
     engines: { node: '>= 0.4' }
     dev: true
+
+  /tailwind-merge@3.0.1:
+    resolution:
+      {
+        integrity: sha512-AvzE8FmSoXC7nC+oU5GlQJbip2UO7tmOhOfQyOmPhrStOGXHU08j8mZEHZ4BmCqY5dWTCo4ClWkNyRNx1wpT0g==,
+      }
+    dev: false
 
   /tailwindcss@3.4.4:
     resolution:
