@@ -2,7 +2,6 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Toggle } from './toggle';
 import { colorVariant } from './toggle-variants';
 import { within, expect, userEvent } from '@storybook/test';
-import { colors } from '../../tokens/colors';
 
 const labelText = 'Toggle';
 const meta = {
