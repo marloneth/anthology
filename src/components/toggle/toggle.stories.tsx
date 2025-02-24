@@ -35,7 +35,7 @@ export const Primary: Story = {
     const canvas = within(canvasElement);
     const container = canvas.getByRole('combobox');
     const input = canvas.getByRole('checkbox');
-    const label = canvas.getByRole('generic', { name: labelText });
+    const label = canvas.getByText(labelText);
 
     expect(container).toHaveStyle({ cursor: 'pointer' });
     expect(label).toBeDefined();
