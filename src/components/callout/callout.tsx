@@ -20,7 +20,7 @@ export const Callout = ({ variant = 'primary', title, children }: CalloutProps) 
       <h2 className="mb-2 flex text-2xl font-bold">
         <Icon className="mr-2" type={iconVariant[variant]} /> {title}
       </h2>
-      <p>{children}</p>
+      <p role="contentinfo">{children}</p>
     </div>
   );
 };

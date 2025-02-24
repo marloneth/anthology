@@ -28,6 +28,9 @@ export const variants = cva(
           'border-transparent',
           'hover:bg-primary-500',
           'active:bg-primary-400',
+          'dark:bg-primary-500',
+          'dark:hover:bg-primary-600',
+          'dark:active:bg-primary-700',
         ],
         secondary: [
           'bg-white',
@@ -35,6 +38,10 @@ export const variants = cva(
           'border-slate-300',
           'hover:bg-slate-50',
           'active:bg-slate-100',
+          'dark:bg-slate-900',
+          'dark:hover:bg-slate-950',
+          'dark:active:bg-black',
+          'dark:text-white',
         ],
         destructive: [
           'bg-danger-600',
@@ -42,6 +49,9 @@ export const variants = cva(
           'border-transparent',
           'hover:bg-danger-500',
           'active:bg-danger-400',
+          'dark:bg-danger-500',
+          'dark:hover:bg-danger-600',
+          'dark:active:bg-danger-700',
         ],
       },
       size: {

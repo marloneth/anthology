@@ -49,7 +49,7 @@ export type IconProps = ComponentProps<LucideIcon> & {
     | 'zap';
 };
 
-const iconComponents: Record<IconProps['type'], LucideIcon> = {
+export const iconComponents: Record<IconProps['type'], LucideIcon> = {
   bug: Bug,
   check: Check,
   chevron: ChevronDown,
@@ -75,7 +75,7 @@ const iconComponents: Record<IconProps['type'], LucideIcon> = {
 
 export const Icon = ({ type, ...props }: IconProps) => {
   const IconComponent = iconComponents[type];
-  return <IconComponent {...props} />;
+  return <IconComponent {...props} role="img" />;
 };
 
 export const icons = Object.keys(iconComponents) as IconProps['type'][];
